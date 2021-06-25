@@ -16,17 +16,34 @@
             <div class="container">
                 <div class="logo">Backendless</div>
                 <div class="themes-block">
-                    <form action="#" method="POST">
-                        <input type="radio" id="light-theme" name="light-themes"
-                            value="light-theme">
+
+                    <div class="themes-l">
+                        <input type="radio" id="light-theme" name="theme">
                         <label for="light-theme">Light Theme</label>
-                        <input type="radio" id="dark-theme" name="dark-theme"
-                            value="dark-theme">
+                        <input type="radio" id="dark-theme" name="theme">
                         <label for="dark-theme">Dark Theme</label>
-                        <input type="radio" id="backendless-theme"
-                            name="backendless-theme" value="backendless-theme">
+                        <input type="radio" id="backendless-theme" name="theme">
                         <label for="backendless-theme">Backendless Theme</label>
-                    </form>
+                    </div>
+
+                    <div class="themes-m">
+                        <button type="button" class="light-theme-btn">Light
+                            Theme</button>
+                        <button type="button" class="dark-theme-btn">Dark
+                            Theme</button>
+                        <button type="button"
+                            class="backendless-theme-btn">Backendless
+                            Theme</button>
+                    </div>
+
+                    <div class="themes-s">
+                        <select name="select" id="select-theme" onchange="changeTheme()">
+                            <option value="light-theme" selected>Light Theme</option>
+                            <option value="dark-theme">Dark Theme</option>
+                            <option value="backendless-theme">Backendless Theme</option>
+                        </select>
+                    </div>
+
                 </div>
             </div>
         </header>
@@ -65,19 +82,20 @@
         <footer class="footer">
             <div class="container">
                 <div class="contacts">
-                    <a href="https://backendless.com/">Backendless.com</a>
+                    <a href="https://backendless.com/"
+                        target="_blank">Backendless.com</a>
                     <a href="tel:555-555-555">555-555-555</a>
                 </div>
                 <div class="icons">
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-facebook-square"></i>
-                    <i class="fab fa-twitter-square"></i>
-                    <i class="fab fa-telegram"></i>
-                    <i class="fab fa-youtube"></i>
-                    <i class="fab fa-vk"></i>
-                    <i class="fas fa-envelope"></i>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-square"></i></a>
+                    <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </footer>
+        <script src="/script.js"></script>
     </body>
 </html>

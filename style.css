@@ -6,6 +6,7 @@ body {
     margin: 0;
     background-color: #E2F1F8;
     font-family: Arial, Helvetica, sans-serif;
+    color: #000;
 }
 
 .container {
@@ -26,6 +27,18 @@ body {
     border-bottom: 3px solid #839198;
 }
 
+.logo {
+    cursor: pointer;
+}
+
+.themes-m {
+    display: none;
+}
+
+.themes-s {
+    display: none;
+}
+
 .footer {
     bottom: 0;
     border-top: 3px solid #839198;
@@ -39,8 +52,26 @@ body {
     align-items: center;
 }
 
+.icons a,
+.contacts a {
+    color: inherit;
+}
+
+.contacts a:first-child {
+    margin-right: 20px;
+}
+
+.icons a {
+    font-size: 22px;
+    padding: 5px;
+}
+
+
+.main-content {
+    padding: 80px 0;
+}
+
 .main-title {
-    margin-top: 80px;
     text-align: center;
     animation: title 3s linear infinite;
 }
@@ -52,7 +83,7 @@ body {
     }
 
     50% {
-        color: grey;
+        color: lightgray;
         letter-spacing: 10px;
     }
 
@@ -67,6 +98,11 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    transition: 500ms;
+}
+
+.img:hover {
+    transform: scale(1.05);
 }
 
 .img-block {
@@ -74,19 +110,19 @@ body {
     padding: 10px;
     display: grid;
     grid-template-areas: "img-1 img-1 img-1 img-2"
-                        "img-1 img-1 img-1 img-3"
-                        "img-1 img-1 img-1 img-4"
-                        "img-5 img-6 img-7 img-8"
-                        "img-9 img-10 img-10 img-10"
-                        "img-11 img-10 img-10 img-10"
-                        "img-12 img-10 img-10 img-10"
-                        "img-16 img-15 img-14 img-13"
-                        "img-17 img-17 img-17 img-18"
-                        "img-17 img-17 img-17 img-19"
-                        "img-17 img-17 img-17 img-20"
-                        "img-21 img-22 img-23 img-24";
-    grid-template-columns: repeat(4, 270px);
-    grid-template-rows: repeat(3, 200px);
+        "img-1 img-1 img-1 img-3"
+        "img-1 img-1 img-1 img-4"
+        "img-5 img-6 img-7 img-8"
+        "img-9 img-10 img-10 img-10"
+        "img-11 img-10 img-10 img-10"
+        "img-12 img-10 img-10 img-10"
+        "img-16 img-15 img-14 img-13"
+        "img-17 img-17 img-17 img-18"
+        "img-17 img-17 img-17 img-19"
+        "img-17 img-17 img-17 img-20"
+        "img-21 img-22 img-23 img-24";
+    grid-template-columns: repeat(auto-fill, minmax(100px, 25%));
+    grid-template-rows: repeat(12, 150px);
     gap: 10px;
 }
 
@@ -186,3 +222,97 @@ body {
     grid-area: img-24;
 }
 
+@media (max-width: 1080px) {
+
+    .footer .container,
+    .header .container {
+        padding: 0 3%;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 1080px) {
+    .container {
+        max-width: 1020px;
+    }
+
+    .themes-m {
+        display: block;
+    }
+
+    .themes-l {
+        display: none;
+    }
+    
+    .themes-s {
+        display: none;
+    }
+
+    .img-block {
+        padding: 5%;
+        grid-template-areas: "img-1 img-1 img-2"
+            "img-1 img-1 img-3"
+            "img-4 img-4 img-5"
+            "img-4 img-4 img-6"
+            "img-7 img-7 img-8"
+            "img-7 img-7 img-9"
+            "img-10 img-10 img-11"
+            "img-10 img-10 img-12"
+            "img-13 img-13 img-14"
+            "img-13 img-13 img-15"
+            "img-16 img-16 img-17"
+            "img-16 img-16 img-18"
+            "img-19 img-19 img-20"
+            "img-19 img-19 img-21"
+            "img-22 img-22 img-23"
+            "img-22 img-22 img-24"
+        ;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 35%));
+        grid-template-rows: repeat(16, 130px);
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .themes-m {
+        display: none;
+    }
+
+    .themes-l {
+        display: none;
+    }
+    
+    .themes-s {
+        display: block;
+    }
+
+    .footer .container {
+        flex-direction: column;
+    }
+
+    .img-block {
+        grid-template-areas: "img-1 img-1 img-1"
+            "img-1 img-1 img-1"
+            "img-2 img-3 img-4"
+            "img-5 img-5 img-5"
+            "img-5 img-5 img-5"
+            "img-6 img-7 img-8"
+            "img-9 img-9 img-9"
+            "img-9 img-9 img-9"
+            "img-10 img-11 img-12"
+            "img-13 img-13 img-13"
+            "img-13 img-13 img-13"
+            "img-14 img-15 img-16"
+            "img-17 img-17 img-17"
+            "img-17 img-17 img-17"
+            "img-18 img-19 img-20"
+            "img-21 img-21 img-21"
+            "img-21 img-21 img-21"
+            "img-22 img-23 img-24";
+        grid-template-columns: repeat(3, 32%);
+        grid-template-rows: repeat(18, 120px);
+    }
+
+}
